@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Moci Educations</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+           background: url("{{ url_for('static', filename='assets/img/d.jpg') }}") no-repeat center center fixed;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        img {
+            width: 60px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='assets/img/logo1.png') }}" alt="Moci Logo">
+    <h1>Welcome to Moci Educations</h1>
+    <p>Click the button below to apply for our <strong>Free Coding Workshop for Students</strong></p>
+    <a href="{{ url_for('index') }}" class="btn">Apply Now</a>
+</body>
+</html>
